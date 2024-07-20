@@ -37,15 +37,15 @@ async function main() {
         const userInput = await logoInfoCollector();
         console.log('User input:', userInput);
 
-        // Call your SVG generation function here
-        generateSVG(userInput.shapeChoice, userInput.logoText, userInput.textColor, userInput.logoColor);
+        // Generate SVG based on user input and save to file
+        await generateSVG(userInput.shapeChoice, userInput.logoText, userInput.textColor, userInput.logoColor, 'output.svg');
 
     } catch (error) {
         console.error('Error in main:', error);
     }
 }
-
-function generateSVG(shape, text, textColor, logoColor) {
+//=============================
+async function generateSVG(shape, text, textColor, logoColor, filename) {
     let svgContent = `<svg width="100" height="100">`;
 
     // Add shape based on user choice
@@ -68,10 +68,16 @@ function generateSVG(shape, text, textColor, logoColor) {
 
     svgContent += `</svg>`;
 
-    // Here you can save `svgContent` to a file or do further processing
-    console.log('Generated SVG:', svgContent);
+    try {
+        // Write SVG content to file
+        await fs.writeFile(filename, svgContent);
+        console.log(`SVG file "${filename}" has been saved.`);
+    } catch (error) {
+        console.error('Error writing SVG file:', error);
+    }
 }
 
+//=============================
 function init() {
     console.log(`
         ----------------------------------
