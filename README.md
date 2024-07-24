@@ -1,6 +1,6 @@
 # SVG logo generator
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT
+![License: MIT(https://img.shields.io/badge/License-MIT-yellow.svg)]
 
 ## Description
 This application was created to allow a user to generate their own Logo into an SVG file with information they are prompted for in the terminal. With the information on how they would like their logo to look, that information is then dynamically stored and through a series of functions, used to create the SVG file code that would correspond to the requested specifications the user chose for their SVG logo
@@ -20,6 +20,7 @@ This application requires the use of the terminal or a coding platform just as v
 ## Usage
 Once packages are installed and code is implemented, to run the application, type into the terminal node index.js
 
+
 ## License
 This application is covered by the ***MIT***.
 
@@ -31,3 +32,7 @@ Three tests were run for this application that tested the three possible shapes 
 
 ## Questions
 Should you have any specific questions regarding my application or would like to compare with my other deployed applcations, contact and general information can be found on my Github homepage found here: GitHub: [@roseyflo](https://github.com/roseyflo)
+
+
+https://github.com/user-attachments/assets/a7004fb2-4e36-444b-8afb-18c2a4b23982
+
